@@ -1,12 +1,11 @@
-use std::{fs::read_to_string, io::Error};
+use math::find_k;
 
-
-
-fn read_file(path: &str) -> Result<String,Error> {
-    
-    read_to_string(path)
-}
+mod math;
 
 fn main() {
-    read_file("./files/name.txt");
+    let r = ["da", "d"];
+
+    if let Some(res) = find_k(&r, &"da") {
+        println!("{}", res);
+    }
 }
